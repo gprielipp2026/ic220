@@ -82,7 +82,7 @@ loop:
 	bl	show		// push to pixels
 
 	// waste about .5s
-	mov	x19, #1073741823	// loop 1073741823 times
+	mov	x19, 1073741823 // loop 1073741823 times
 wasteTime:
 	sub	x19, x19, #1	// x19--
 	cbnz	x19, wasteTime	// while(x19 > 0)
