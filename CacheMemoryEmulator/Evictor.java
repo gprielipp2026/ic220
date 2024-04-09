@@ -1,4 +1,6 @@
-public interface Evictor
+public interface Evictor<T>
 {
-  public void collision(int addr, Cache cache);
+  public void write(int addr, T value);
+  public T read(int addr);
+  public void evict(int addr, Cache cache);
 }
